@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eine kleine Auswahl an Freizeitideen in Wien. Nach Kategorie und Ort durchsuchen.">
+  <meta name="theme-color" content="#faf9f6">
+  <title>Freizeitideen in Wien — Freizeitideen</title>
+  <link rel="stylesheet" href="/src/style.css">
+  <script type="module" src="/src/main.ts"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="Freizeitideen in Wien Startseite">Freizeitideen in Wien</a>
+    <nav aria-label="Hauptnavigation"><a href="#entdecken">Freizeitideen</a><a href="#idee">Über das Projekt</a></nav>
+  </header>
+  <main id="main">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="edition">Eine kleine Sammlung für Wien</p>
+      <h1 id="page-title">Was machen wir<br>am Wochenende?</h1>
+      <p>Spazieren gehen, Kunst anschauen oder Leute treffen.<br class="desktop-break"> Hier findest du sechs Ideen für einen freien Nachmittag.</p>
+    </section>
+    <section class="discover" id="entdecken" aria-labelledby="discover-title">
+      <form class="filters" role="search" aria-label="Freizeitideen filtern">
+        <h2 id="discover-title">Auswahl eingrenzen</h2>
+        <label class="search-label" for="search">Suchbegriff<input id="search" name="search" type="search" placeholder="Name, Ort oder Bezirk" autocomplete="off"></label>
+        <fieldset>
+          <legend>Kategorie</legend>
+          <p class="category-buttons">
+            <button type="button" data-category="Alle" aria-pressed="true">Alle Ideen <span></span></button>
+            <button type="button" data-category="Draußen" aria-pressed="false">Draußen <span></span></button>
+            <button type="button" data-category="Kultur" aria-pressed="false">Kultur <span></span></button>
+            <button type="button" data-category="Zusammen" aria-pressed="false">Zusammen <span></span></button>
+          </p>
+        </fieldset>
+        <p class="filter-note">Die Suche berücksichtigt auch die Beschreibungen. Die Zahlen zeigen die Treffer pro Kategorie.</p>
+        <button id="reset-filters" class="reset-filters" type="button" hidden>Filter zurücksetzen</button>
+      </form>
+      <section class="results" aria-label="Suchergebnisse">
+        <header class="results-header"><h2>Freizeitideen</h2><p id="result-count" role="status" aria-live="polite" aria-atomic="true"></p></header>
+        <section id="event-list" class="event-list" aria-label="Passende Freizeitideen"></section>
+        <p id="empty-state" class="empty-state" hidden>Keine passenden Ideen gefunden. Ändere den Suchbegriff oder wähle eine andere Kategorie.</p>
+        <noscript><p>Bitte aktiviere JavaScript, um die Freizeitideen anzuzeigen.</p></noscript>
+      </section>
+    </section>
+    <aside id="idee" class="about" aria-labelledby="about-title">
+      <h2 id="about-title">Über das Projekt</h2>
+      <p>Diese Seite ist im Rahmen der ESA1 für Frontend Development entstanden. Die sechs Einträge sind fiktive Beispiele, mit denen sich Suche und Filter ausprobieren lassen. Es gibt keine tatsächlichen Termine oder Buchungen.</p>
+    </aside>
+  </main>
+  <footer class="site-footer"><p>Mohamed Wahba · ESA1</p><a href="#main">Zurück nach oben ↑</a><p>Wien, 2026</p></footer>
+</body>
+</html>

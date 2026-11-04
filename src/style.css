@@ -1,0 +1,91 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #282823;
+  background: #faf9f6;
+  line-height: 1.6;
+  font-synthesis: none;
+  --accent: #873d31;
+  --muted: #64645c;
+  --line: #d8d7cf;
+}
+* { box-sizing: border-box; }
+body { margin: 0; overflow-wrap: anywhere; }
+h1, h2, h3, p { margin: 0; }
+a { color: inherit; text-underline-offset: 4px; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+[hidden] { display: none !important; }
+.site-header, main, .site-footer { width: min(1080px, calc(100% - 80px)); margin-inline: auto; }
+.site-header { display: flex; justify-content: space-between; align-items: center; min-height: 96px; border-bottom: 1px solid var(--line); }
+.wordmark { font-family: Georgia, serif; font-size: 29px; font-weight: bold; letter-spacing: -1px; text-decoration: none; }
+nav { display: flex; gap: 30px; font-size: 13px; }
+nav a { text-decoration: none; padding-block: 12px; }
+nav a:hover { text-decoration: underline; }
+.intro { padding: 56px 0 50px; }
+.edition { color: var(--accent); font-size: 12px; margin-bottom: 19px; }
+h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(39px, 4.5vw, 57px); line-height: 1.1; font-weight: normal; letter-spacing: -1.7px; margin-bottom: 22px; }
+.intro > p:last-child { font-size: 15px; color: var(--muted); line-height: 1.8; }
+.discover { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 64px; border-top: 2px solid #282823; padding-top: 28px; }
+.filters h2 { font-size: 13px; font-weight: bold; margin-bottom: 23px; }
+.search-label { display: grid; gap: 8px; font-size: 12px; }
+input[type='search'] { width: 100%; min-width: 0; min-height: 44px; padding: 10px 12px; border: 1px solid #a6a69b; border-radius: 0; background: white; color: #282823; font-size: 13px; }
+input::placeholder { color: #6b6b63; }
+fieldset { margin: 24px 0 0; padding: 0; border: 0; min-width: 0; }
+legend { font-size: 12px; margin-bottom: 9px; }
+.category-buttons { display: grid; gap: 3px; }
+.category-buttons button { display: flex; justify-content: space-between; align-items: center; width: 100%; border: 0; border-left: 2px solid transparent; padding: 10px 12px; min-height: 44px; text-align: left; color: #44443c; background: transparent; font-size: 13px; }
+.category-buttons button span { font-size: 11px; }
+.category-buttons button:hover { background: #eeede7; }
+.category-buttons button[aria-pressed='true'] { border-left-color: var(--accent); background: #eeede7; color: #742e24; font-weight: bold; }
+.reset-filters { margin-top: 16px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--accent); background: transparent; color: var(--accent); font-size: 13px; }
+.reset-filters:hover { background: #eeede7; }
+.filter-note { margin-top: 24px; color: var(--muted); font-size: 11px; line-height: 1.7; max-width: 180px; }
+.results-header { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-bottom: 21px; }
+.results-header h2 { font-size: 13px; }
+#result-count { font-size: 11px; color: var(--muted); }
+.event-card { display: grid; grid-template-columns: 37px minmax(0, 1fr) 95px; gap: 20px; padding: 25px 0 27px; border-top: 1px solid var(--line); }
+.event-number { color: #73736a; font-family: Georgia, serif; font-size: 19px; line-height: 1.3; padding-top: 3px; }
+.category-tag { color: var(--accent); font-size: 11px; margin-bottom: 5px; }
+.card-title { font-family: Georgia, 'Times New Roman', serif; font-size: 24px; font-weight: normal; line-height: 1.25; margin-bottom: 7px; letter-spacing: -.3px; }
+.location { font-size: 11px; color: var(--muted); margin-bottom: 12px; }
+.description { font-size: 13px; line-height: 1.75; color: #55554e; max-width: 440px; }
+.card-meta { text-align: right; font-size: 11px; color: var(--muted); padding-top: 4px; }
+.price { display: block; font-size: 13px; font-weight: bold; color: #282823; margin-bottom: 6px; }
+.empty-state { padding: 28px 0; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+.about { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 64px; margin-top: 50px; padding: 28px 0 40px; border-top: 1px solid var(--line); }
+.about h2 { font-size: 13px; }
+.about p { font-size: 12px; color: var(--muted); line-height: 1.8; max-width: 620px; }
+.site-footer { display: flex; justify-content: space-between; gap: 20px; padding: 22px 0 30px; border-top: 1px solid var(--line); font-size: 11px; color: var(--muted); }
+.skip-link { position: fixed; top: -100px; left: 20px; background: #282823; color: white; padding: 12px; z-index: 10; }
+.skip-link:focus { top: 12px; }
+@media (max-width: 800px) {
+  .site-header, main, .site-footer { width: calc(100% - 40px); }
+  .discover, .about { grid-template-columns: 180px minmax(0, 1fr); gap: 30px; }
+  .event-card { grid-template-columns: 25px minmax(0, 1fr); gap: 12px; }
+  .card-meta { grid-column: 2; text-align: left; display: flex; align-items: baseline; gap: 14px; padding: 0; }
+  .price { margin: 0; }
+}
+@media (max-width: 600px) {
+  .site-header { min-height: 80px; gap: 8px 15px; flex-wrap: wrap; padding-block: 12px; }
+  .wordmark { font-size: 25px; }
+  nav { gap: 15px; font-size: 11px; }
+  .intro { padding: 35px 0; }
+  h1 { font-size: clamp(32px, 8vw, 41px); }
+  .intro > p:last-child { font-size: 14px; }
+  .desktop-break { display: none; }
+  .discover, .about { display: block; }
+  .filters h2 { margin-bottom: 15px; }
+  .category-buttons { display: flex; flex-wrap: wrap; gap: 5px; }
+  .category-buttons button { width: auto; border: 1px solid var(--line); border-bottom-width: 2px; padding: 9px 11px; gap: 10px; font-size: 12px; }
+  .category-buttons button[aria-pressed='true'] { border-left-color: var(--line); border-bottom-color: var(--accent); }
+  fieldset { margin-top: 17px; }
+  .filter-note { max-width: none; margin-top: 13px; }
+  .results { margin-top: 29px; }
+  .results-header { padding-bottom: 15px; flex-wrap: wrap; gap: 4px 16px; }
+  .event-card { padding: 23px 0; }
+  .card-title { font-size: 23px; }
+  .about { margin-top: 25px; padding: 23px 0 30px; }
+  .about h2 { margin-bottom: 12px; }
+  .site-footer { flex-wrap: wrap; gap: 10px 20px; }
+}
