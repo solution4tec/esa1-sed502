@@ -27,6 +27,10 @@ npm run preview
 - Die Trefferliste und Kategorie-Zähler reagieren auf Eingaben. Ein Button setzt die Filter zurück.
 - Beschriftete Navigation und Suche, `aria-pressed`, eine Statusmeldung, Skip-Link und sichtbarer Tastaturfokus unterstützen die Zugänglichkeit. CSS passt das Layout an die Bildschirmbreite an.
 
+## Accessibility-Nachweis
+
+Lighthouse Accessibility: **100/100**, geprüft am 04.11.2026 am lokalen Produktionsbuild. Der Screenshot steht in [lighthouse.png](lighthouse.png).
+
 ## Ressourcen und AI-Unterstützung
 
 Die ESA1-Angabe definiert die Anforderungen. ChatGPT wurde für Themenvorschlag und Teile der Codeerstellung und Formulierung eingesetzt. Texte und fiktive Beispieldaten wurden für dieses Projekt erstellt. Die Seite verwendet ausschließlich Systemschriften.
